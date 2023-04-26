@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: hacbs-test-project
+  namespace: default
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/kpavic/hacbs-test-project@sha256:ccbaac4f340711f863b9c6bf5d09d5384d65008c063b785585eeee6132c7d48a
+        name: hacbs-jvm-build-test-project
+        resources: {}
+status: {}
